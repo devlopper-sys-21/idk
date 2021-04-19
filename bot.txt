@@ -1,22 +1,26 @@
---[[
-~Skrt 
+B_S = 5 -- here you can change size
 
-Ihave was here <3
-
-Simple Strucid Hitboxe
-]]
-
-_G.Size = 5 --Change to any size 100> Or else you will lag
+--while loop
 while true do
+
             for i,v in next, game:GetService('Players'):GetPlayers() do 
+
                 if v ~= plr then 
+
                 pcall(function()
-                    v.Character.HDetector.Size = Vector3.new(_G.Size, _G.Size, _G.Size, _G.Size) --Any size it's bypassed now
-                    v.Character.HDetector.Transparency=1
-                    v.Character.HDetector.Color = Color3.fromHSV(i,3,5,2)
-                    v.Character.HDetector.Massless = true--Really ez just makes it massless obv
+
+                    v.Character.HDetector.Size = Vector3.new(B_S, B_S, B_S, B_S)
+		    v.Character.HDetector.Massless = true
+                    v.Character.HDetector.Color = Color3.fromHSV(i,3,5,2) -- change color HSV 
+		    v.Character.HDetector.Transparency = 1 -- if you want to make it transparent put it to "1" if you want visible put it to "0" 
+                    v.Character.HDetector.Massless = true
+
                 end)
+
             end
+
         end
-        wait()
+
+     wait()
+
 end
