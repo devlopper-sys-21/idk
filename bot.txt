@@ -1,4 +1,4 @@
-B_S = 3 -- here you can change size
+B_S = 70-- here you can change size
 
 --while loop
 while true do
